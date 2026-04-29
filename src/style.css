@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg-deep: #05070c;
+  --bg-night: #0d1320;
+  --bg-road: #0e1418;
+  --saffron: #ff8d28;
+  --neon-cyan: #44d8ff;
+  --emerald: #59f0a4;
+  --danger: #ff4f4f;
+  --cream: #fff1da;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(255, 141, 40, 0.16), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(68, 216, 255, 0.11), transparent 26%),
+    linear-gradient(180deg, #090c14 0%, #05070c 65%, #030407 100%);
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 10%),
+    radial-gradient(circle at center, transparent 55%, rgba(0, 0, 0, 0.35) 100%);
+  mix-blend-mode: screen;
+}
+
+#app {
+  position: relative;
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 50%, transparent 50%);
+  background-size: 3px 3px, 4px 4px;
+  mix-blend-mode: soft-light;
+}
+
+.canvas-shell {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hud-panel {
+  backdrop-filter: blur(22px);
+  background: linear-gradient(180deg, rgba(9, 13, 19, 0.8), rgba(5, 8, 13, 0.52));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 12px 50px rgba(0, 0, 0, 0.42);
+}
+
+.gauge-fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, rgba(255, 141, 40, 0.95), rgba(255, 72, 72, 0.95));
+  box-shadow: 0 0 18px rgba(255, 111, 80, 0.4);
+}
+
+.gauge-fill.cool {
+  background: linear-gradient(90deg, rgba(68, 216, 255, 0.96), rgba(89, 240, 164, 0.88));
+  box-shadow: 0 0 18px rgba(68, 216, 255, 0.34);
+}
+
+.boost-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
+  background:
+    radial-gradient(circle at center, transparent 42%, rgba(68, 216, 255, 0.16) 60%, rgba(255, 141, 40, 0.12) 78%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.boost-vignette.active {
+  opacity: 1;
+}
+
+.title-display {
+  font-family: "Teko", sans-serif;
+  letter-spacing: 0.14em;
+}
+
+.speed-glow {
+  text-shadow:
+    0 0 28px rgba(255, 141, 40, 0.35),
+    0 0 12px rgba(255, 255, 255, 0.12);
+}
+
+.corner-chip {
+  position: relative;
+  overflow: hidden;
+}
+
+.corner-chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.09) 50%, transparent 100%);
+  transform: translateX(-130%);
+  animation: scan 7s linear infinite;
+}
+
+@keyframes scan {
+  to {
+    transform: translateX(130%);
+  }
+}
+
+canvas {
+  display: block;
+}
+
