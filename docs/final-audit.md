@@ -18,6 +18,7 @@ Built a standalone repo containing:
 - `npm run build`
 - `npm run test`
 - Playwright smoke test via production preview using `tests/browser_smoke.py`
+- Screenshot gallery capture via `tests/capture_gallery.py`
 
 ### Build status
 
@@ -25,6 +26,7 @@ Built a standalone repo containing:
 - Vitest suite passes
 - game logic is modularized instead of being embedded in a monolithic file
 - browser smoke test passes and produces a screenshot artifact at `tests/artifacts/nh6-pursuit-smoke.png`
+- README gallery screenshots are generated under `docs/screenshots/`
 
 ## Quality review
 

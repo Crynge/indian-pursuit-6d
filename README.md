@@ -21,7 +21,21 @@ This repo ships two layers:
 
 - It is **not** a verified Unity build, because Unity is not installed in this environment.
 - It is **not** a licensed real-car simulator. The vehicles are original, Indian-road-inspired archetypes such as hatchbacks, sedans, buses, lorries, and an interceptor SUV.
-- It is **not** a true hardware “6D motion rig” experience. The repo aims for a 6D-inspired sense of motion through camera sway, boost vignette, pursuit pressure, and environmental speed cues.
+- It is **not** a true hardware "6D motion rig" experience. The repo aims for a 6D-inspired sense of motion through camera sway, boost vignette, pursuit pressure, and environmental speed cues.
+
+## Screenshots
+
+### Intro screen
+
+![NH6 Pursuit intro](./docs/screenshots/intro-screen.png)
+
+### Highway run
+
+![NH6 Pursuit gameplay on the expressway](./docs/screenshots/highway-run.png)
+
+### Boost phase
+
+![NH6 Pursuit boost and police pressure](./docs/screenshots/boost-run.png)
 
 ## Stack
 
@@ -69,6 +83,12 @@ npm run test
 npm run audit
 ```
 
+To refresh the README gallery locally:
+
+```bash
+python tests/capture_gallery.py
+```
+
 ## Repo structure
 
 ```text
@@ -77,8 +97,8 @@ src/
     core/           renderer, HUD, input, audio, helpers, vehicle factory
     data/           vehicle archetypes
     systems/        environment, traffic, pursuit
-tests/              logic smoke tests
-docs/               architecture and final audit notes
+tests/              logic smoke tests and screenshot tooling
+docs/               architecture, screenshots, and final audit notes
 unity-blueprint/    C# and Unity-oriented system mapping
 ```
 
@@ -90,6 +110,7 @@ unity-blueprint/    C# and Unity-oriented system mapping
 - [src/game/systems/PursuitSystem.js](./src/game/systems/PursuitSystem.js)
 - [docs/architecture.md](./docs/architecture.md)
 - [docs/final-audit.md](./docs/final-audit.md)
+- [docs/screenshots](./docs/screenshots)
 - [unity-blueprint/README.md](./unity-blueprint/README.md)
 
 ## Notes on realism
