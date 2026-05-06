@@ -1,5 +1,17 @@
 # NH6 Pursuit: Indian Road Heat
 
+<!-- portfolio-seo:start -->
+![Stars](https://img.shields.io/github/stars/Crynge/indian-pursuit-6d?style=flat-square) ![License](https://img.shields.io/github/license/Crynge/indian-pursuit-6d?style=flat-square) ![Status](https://img.shields.io/badge/status-active-blue?style=flat-square)
+
+![Social Preview](docs/social-preview.png)
+
+> Indian-road racing game prototype with cinematic chase gameplay, browser build systems, and a Unity-ready blueprint.
+
+**GitHub Search Keywords:** indian racing game, browser racing game, unity racing prototype, indian roads game, javascript racing game, chase game, car game prototype
+
+<!-- portfolio-seo:end -->
+
+
 A cinematic road-racing and police-pursuit prototype inspired by Indian expressways, mixed traffic, monsoon dusk lighting, and high-pressure highway weaving.
 
 This repo ships two layers:
@@ -116,4 +128,3 @@ unity-blueprint/    C# and Unity-oriented system mapping
 ## Notes on realism
 
 Within this environment, the strongest truthful deliverable is a high-fidelity pursuit prototype with performance-conscious rendering and a clean architecture. The repo leans into atmosphere, chase tension, and Indian-road identity rather than making false claims about AAA photorealism or a Unity build that was never verified.
-
