@@ -11,6 +11,15 @@
 
 <!-- portfolio-seo:end -->
 
+<!-- portfolio-links:start -->
+<div align="center">
+
+[Documentation](docs) &middot; [Architecture](docs/architecture.md) &middot; [Audit](docs/final-audit.md) &middot; [Screenshots](docs/screenshots) &middot; [Contributing](CONTRIBUTING.md) &middot; [Security](SECURITY.md) &middot; [Authors](AUTHORS.md) &middot; [Workflows](.github/workflows)
+
+</div>
+<!-- portfolio-links:end -->
+
+
 
 A cinematic road-racing and police-pursuit prototype inspired by Indian expressways, mixed traffic, monsoon dusk lighting, and high-pressure highway weaving.
 
